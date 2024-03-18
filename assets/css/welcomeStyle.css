@@ -1,0 +1,101 @@
+body {
+  background-image: url(../bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-inline: 5%;
+  padding-block: 1%;
+}
+
+#logo img {
+  width: 15%;
+
+}
+
+main h1 {
+  font-family: "outfit";
+  color: white;
+  font-size: 60px;
+  font-weight: 400;
+  margin: 0;
+  margin-top: 6%;
+  line-height: 45px;
+}
+
+h1 span {
+  display: block;
+  font-weight: bold;
+}
+
+main h2 {
+  font-family: "outfit";
+  color: white;
+  margin: 0;
+  font-size: 60px;
+}
+
+main h3 {
+  font-family: "inter";
+  color: #d20094;
+  margin-top: 3%;
+  margin-bottom: 0;
+  font-size: 25px;
+}
+
+main p {
+  font-family: "inter";
+  color: white;
+  font-size: 16px;
+}
+
+ul {
+  color: white;
+  font-size: 16px;
+  font-family: "inter";
+  margin-top: 2%;
+  line-height: 30px;
+
+}
+
+footer label {
+  font-family: "inter";
+  font-size: px;
+  color: white;
+
+
+}
+
+#proceed {
+  font-family: "inter";
+  color: #000000;
+  font-size: 40px;
+  background: #00FFFF;
+  padding: 9px 40px 10px 40px;
+  text-decoration: none;
+  box-shadow: 4px 4px 41px 7px rgba(0, 255, 255, 0.76);
+  border: none
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10%;
+
+
+}
+
+#promise {
+  accent-color: transparent;
+  appearance: none;
+  -webkit-appearance: none;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  font-size: 2rem;
+  padding: 0.1rem;
+  border: 0.25rem solid white;
+
+}
+
+#promise:checked {
+  background: #0b113b;
+}
