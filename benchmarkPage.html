@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Benchmark Page</title>
+    <link rel="stylesheet" href="../assets/css/reset.css" />
+    <link rel="stylesheet" href="assets/css/benchmark-style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <header>
+      <div id="logo">
+        <img src="../assets/epicode_logo.png" alt="logo epicode" />
+      </div>
+
+      <div id="language">
+        <select id="languageSelect">
+          <option value="en" selected>🇺🇸</option>
+          <option value="it">🇮🇹</option>
+          <option value="es">🇪🇸</option>
+        </select>
+      </div>    </header>
+    <main>
+      <section id="loaded">
+        <div class="progress">
+          <h5>SECONDI</h5>
+          <p id="counter">50</p>
+          <h5>RIMANENTI</h5>
+        </div>
+      </section>
+
+      <section>
+        <div id="question">
+          <h2>
+            Stiamo preparando un attacco ad una macchina con Metasploit. Il
+            Vulnerabi Assessment riporta che la macchina target presenta un
+            servizio sulla porta 21 TCP potenzialmente vulnerabile. Quali dei
+            seguenti comandi potremmo utilizzare per individuare un exploit da
+            utilizzare?
+          </h2>
+        </div>
+        <div id="answers"></div>
+      </section>
+    </main>
+    <footer>
+      <div id="footerContainer">
+      <h4 id="numQuestion"> DOMANDA 1 <span>/ 10</span></h4>
+      <button>PROSSIMA <i class="fas fa-arrow-right"></i></button>
+    </div>
+    </footer>
+    <script src="benchmarkPage.js"></script>
+  </body>
+</html>

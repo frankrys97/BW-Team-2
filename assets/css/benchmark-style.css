@@ -1,0 +1,81 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Outfit:wght@100..900&display=swap");
+/* ------------------------------------------------------------------------------------ */
+body {
+  background-image: url(../bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-inline: 5%;
+  padding-block: 1%;
+  color: white;
+}
+
+header {
+  display: flex;
+  select {
+    font-size: 1.8em;
+    background-color: transparent;
+    border: transparent;
+    color: white;
+  }
+}
+
+#logo img {
+  width: 15%;
+}
+
+main {
+  margin-bottom: 200px;
+  margin-top: 30px;
+}
+
+#loaded {
+  margin-block: 30px;
+  display: flex;
+  justify-content: end;
+}
+
+.progress {
+  padding: 10px;
+  width: 80px;
+  height: 80px;
+  border: 16.8px solid #dbdcef;
+  border-radius: 50%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5), inset 0 0 10px rgba(0, 0, 0, 6);
+  h5 {
+    font-size: 0.5em;
+  }
+  #counter {
+    font-size: 2.5em;
+  }
+}
+
+#question {
+  font-family: "Outfit";
+  font-size: 1.5em;
+}
+
+footer {
+  font-family: "Inter";
+  #footerContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  button {
+    font-size: 1.3em;
+    font-weight: bold;
+    padding-inline: 55px;
+    padding-block: 15px;
+    background-color: transparent;
+    color: white;
+    border: 1px solid white;
+  }
+  span {
+    color: #9b1e8d;
+  }
+}
