@@ -74,6 +74,7 @@ footer {
     background-color: transparent;
     color: white;
     border: 1px solid white;
+    cursor: pointer;
   }
   span {
     color: #9b1e8d;
