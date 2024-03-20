@@ -26,34 +26,23 @@
           <option value="it">🇮🇹</option>
           <option value="es">🇪🇸</option>
         </select>
-      </div>    </header>
+      </div>
+    </header>
     <main>
-      <section id="loaded">
-        <div class="progress">
-          <h5>SECONDI</h5>
-          <p id="counter">50</p>
-          <h5>RIMANENTI</h5>
-        </div>
-      </section>
+      <div id="app"></div>
 
       <section>
-        <div id="question">
-          <h2>
-            Stiamo preparando un attacco ad una macchina con Metasploit. Il
-            Vulnerabi Assessment riporta che la macchina target presenta un
-            servizio sulla porta 21 TCP potenzialmente vulnerabile. Quali dei
-            seguenti comandi potremmo utilizzare per individuare un exploit da
-            utilizzare?
-          </h2>
+        <div>
+          <h2 id="question"></h2>
         </div>
         <div id="answers"></div>
       </section>
     </main>
     <footer>
       <div id="footerContainer">
-      <h4 id="numQuestion"> DOMANDA 1 <span>/ 10</span></h4>
-      <button>PROSSIMA <i class="fas fa-arrow-right"></i></button>
-    </div>
+        <h4 id="numQuestion"></h4>
+        <button id="proceed">PROCEED <i class="fas fa-arrow-right"></i></button>
+      </div>
     </footer>
     <script src="benchmarkPage.js"></script>
   </body>
