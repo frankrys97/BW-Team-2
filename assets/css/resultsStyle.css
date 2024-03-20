@@ -22,6 +22,9 @@ footer {
   width: 100%;
   padding-top: 100px;
   padding-bottom: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 .correct-result {
   display: inline-block;
@@ -35,7 +38,8 @@ footer {
   font-size: 20px;
   font-weight: 300;
 }
-.middle-result {
+
+/* .middle-result {
   display: inline-block;
   width: 280px;
   height: 280px;
@@ -46,20 +50,37 @@ footer {
   padding: 20px;
   box-shadow: 0px 0px 50px 9px rgba(0, 0, 0, 0.5),
     inset 0px 0px 50px 9px rgba(0, 0, 0, 0.5);
+} */
+.middle-result {
+  position: absolute; /* Posiziona in modo assoluto all'interno del contenitore */
+  top: 50%; /* Posiziona il top al 50% del contenitore */
+  left: 50%; /* Posiziona il left al 50% del contenitore */
+  transform: translate(
+    -50%,
+    -50%
+  ); /* Trasla il 50% sia in verticale che in orizzontale rispetto al proprio centro */
+  text-align: center; /* Centra il testo all'interno del div */
+}
+#container {
+  position: relative; /* Necessario per posizionare il div middle-result all'interno */
+  width: 35%; /* Imposta la larghezza desiderata del contenitore */
+  margin: 0 auto; /* Centra il contenitore orizzontalmente */
 }
 .middle-result h4 {
-  margin-top: 60px;
   margin-bottom: 40px;
   font-weight: bold;
   line-height: 25px;
+  font-size: 1.5em;
 }
 .middle-result p {
   font-size: 14px;
   line-height: 20px;
   font-weight: 300;
+  font-size: 1em;
 }
 .middle-result span {
   color: #00ffff;
+  display: block;
 }
 .wrong-result {
   display: inline-block;
@@ -81,7 +102,9 @@ footer {
   padding-block: 15px;
   padding-inline: 80px;
   box-shadow: 0px 0px 25px -5px #00ffff54;
+  cursor: pointer;
 }
-.result-percentage {
+.correct-percentage,
+.wrong-percentage {
   font-weight: bold;
 }
