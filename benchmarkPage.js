@@ -510,14 +510,16 @@ randomQuestion();
 
 const arrayOfSelectedAnswers = [];
 
-const counterScore = function () {
+let finalScore = 0;
+
+let counterScore = function () {
   let score = 0;
   for (let i = 0; i < arrayOfSelectedAnswers.length; i++) {
     if (arrayOfSelectedAnswers[i] === arrayOfCorrect[i]) {
       score++;
     }
   }
-  return score;
+  return (finalScore = score);
 };
 
 function resetTimer() {
@@ -566,14 +568,16 @@ button.addEventListener("click", () => {
   checkLastQuestion();
 });
 
-counterScore();
-
 let numQuestion = document.getElementById("numQuestion");
 
 numQuestion.innerHTML = `QUESTION ${questionCounter} <span>  / 30 </span>`;
 
 const checkLastQuestion = function () {
   if (arrayOfSelectedAnswers.length === 30) {
+    counterScore();
+    sessionStorage.setItem("finalScore", JSON.stringify(finalScore));
+    const totalQuestion = selectedQuestion.length;
+    sessionStorage.setItem("totalQuestion", JSON.stringify(totalQuestion));
     window.location.href = "results.html";
   }
 };
