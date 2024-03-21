@@ -91,7 +91,8 @@ footer {
   background-color: #00ffff;
   box-shadow: 4px 4px 41px 7px rgba(0, 255, 255, 0.76);
   cursor: pointer;
-  color: black;
+  color: #0c113c;
+  border: #0c113c;
 }
 
 .css-checkbox {
@@ -170,7 +171,7 @@ footer {
 }
 select {
   padding: 5px;
-  background-color: transparent;
+  background-color: #0c113c;
   color: white;
   font-size: 0.7em;
   border: 0.5px solid white;
@@ -179,4 +180,9 @@ select {
 
 #selectNumber {
   margin-left: 20px;
+}
+#difficultChoice p {
+  color: white;
+  font-family: "Outfit";
+  margin-block: 10px;
 }

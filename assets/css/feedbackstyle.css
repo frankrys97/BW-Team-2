@@ -15,6 +15,9 @@ body {
 header {
   margin-bottom: 10px;
 }
+#heading-div p {
+  margin-top: 10px;
+}
 
 #general-box {
   margin-left: 300px;
@@ -24,6 +27,7 @@ header {
 main {
   text-align: center;
   margin-top: 40px;
+  max-width: 2000px;
 }
 
 h1 {
@@ -40,7 +44,7 @@ p {
 }
 
 svg path {
-  fill: rgba(255, 255, 255, 0.719);
+  fill: #172074;
 }
 
 svg {
@@ -120,8 +124,8 @@ a {
 }
 
 button:hover {
-  color: black;
+  color: #0c113c;
   background-color: #00ffff;
-  border: black;
+  border: #0c113c;
   box-shadow: 4px 4px 41px 7px rgba(0, 255, 255, 0.76);
 }

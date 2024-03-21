@@ -10,8 +10,8 @@ checkbox.addEventListener("change", () => {
     button.classList.remove("activeButton");
   }
 
-  while (difficultChoiceDiv.querySelector("p")) {
-    difficultChoiceDiv.removeChild(difficultChoiceDiv.querySelector("p"));
+  while (difficultChoiceDiv.querySelector(".req")) {
+    difficultChoiceDiv.removeChild(difficultChoiceDiv.querySelector(".req"));
   }
 });
 
@@ -887,14 +887,16 @@ const difficultChoiceDiv = document.getElementById("difficultChoice");
 const selectNumber = document.getElementById("selectNumber");
 
 selectDiff.addEventListener("change", () => {
-  while (difficultChoiceDiv.querySelector("p")) {
-    difficultChoiceDiv.removeChild(difficultChoiceDiv.querySelector("p"));
+  while (difficultChoiceDiv.querySelector(".req")) {
+    difficultChoiceDiv.removeChild(difficultChoiceDiv.querySelector(".req"));
   }
 });
 
 button.addEventListener("click", () => {
   const selectNum = selectNumber.value;
-
+  while (difficultChoiceDiv.querySelector(".req")) {
+    difficultChoiceDiv.removeChild(difficultChoiceDiv.querySelector(".req"));
+  }
   if (selectDiff.value === "opzione1") {
     sessionStorage.setItem(
       "arrayEasy",
@@ -915,9 +917,10 @@ button.addEventListener("click", () => {
     window.location.href = "benchmarkPage.html";
   } else {
     const required = document.createElement("p");
-    required.innerHTML = " * difficulty required";
+    required.innerHTML = " * fields required";
     required.style.color = "red";
     required.style.fontSize = "0.7em";
+    required.classList.add("req");
     difficultChoiceDiv.appendChild(required);
   }
 });

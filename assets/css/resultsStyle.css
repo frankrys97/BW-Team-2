@@ -24,10 +24,18 @@ body {
   font-size: 24px;
   font-weight: 300;
 }
-main,
+main {
+  text-align: center;
+  color: white;
+}
 footer {
   text-align: center;
   color: white;
+  position: fixed;
+  bottom: 0;
+  width: 90%;
+  margin-bottom: 20px;
+  font-family: "Inter";
 }
 .middle-box {
   width: 100%;
@@ -49,18 +57,6 @@ footer {
   font-weight: 300;
 }
 
-/* .middle-result {
-  display: inline-block;
-  width: 280px;
-  height: 280px;
-  border: 50px solid #00ffff;
-  border-radius: 50%;
-  font-family: "Inter";
-  font-size: 20px;
-  padding: 20px;
-  box-shadow: 0px 0px 50px 9px rgba(0, 0, 0, 0.5),
-    inset 0px 0px 50px 9px rgba(0, 0, 0, 0.5);
-} */
 .middle-result {
   position: absolute; /* Posiziona in modo assoluto all'interno del contenitore */
   top: 50%; /* Posiziona il top al 50% del contenitore */
@@ -121,6 +117,7 @@ svg {
   cursor: pointer;
   font-family: "Outfit";
   width: 200px;
+  margin-bottom: 30px;
 }
 .correct-percentage,
 .wrong-percentage {
@@ -128,8 +125,8 @@ svg {
 }
 
 #rateus-button:hover {
-  color: black;
+  color: #0c113c;
   background-color: #00ffff;
-  border: black;
+  border: #0c113c;
   box-shadow: 4px 4px 41px 7px rgba(0, 255, 255, 0.76);
 }
