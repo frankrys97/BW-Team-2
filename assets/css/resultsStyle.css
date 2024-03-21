@@ -60,6 +60,7 @@ footer {
     -50%
   ); /* Trasla il 50% sia in verticale che in orizzontale rispetto al proprio centro */
   text-align: center; /* Centra il testo all'interno del div */
+  font-family: "Outfit";
 }
 #container {
   position: relative; /* Necessario per posizionare il div middle-result all'interno */
@@ -103,6 +104,7 @@ footer {
   padding-inline: 80px;
   box-shadow: 0px 0px 25px -5px #00ffff54;
   cursor: pointer;
+  font-family: "Outfit";
 }
 .correct-percentage,
 .wrong-percentage {
