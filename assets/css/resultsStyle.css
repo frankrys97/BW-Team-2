@@ -1,0 +1,117 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Outfit:wght@100..900&display=swap");
+
+/* ------------------------------------ */
+#results-title h1 {
+  font-family: "Outfit";
+  font-size: 60px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+#results-title h2 {
+  font-family: "Inter";
+  font-size: 24px;
+  font-weight: 300;
+}
+main,
+footer {
+  text-align: center;
+  color: white;
+}
+.middle-box {
+  width: 100%;
+  margin-block: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.correct-result {
+  display: inline-block;
+  width: 30%;
+  font-size: 60px;
+  font-family: "Inter";
+  text-align: left;
+  padding-top: 50;
+}
+.correct-result h3 {
+  font-size: 20px;
+  font-weight: 300;
+}
+
+/* .middle-result {
+  display: inline-block;
+  width: 280px;
+  height: 280px;
+  border: 50px solid #00ffff;
+  border-radius: 50%;
+  font-family: "Inter";
+  font-size: 20px;
+  padding: 20px;
+  box-shadow: 0px 0px 50px 9px rgba(0, 0, 0, 0.5),
+    inset 0px 0px 50px 9px rgba(0, 0, 0, 0.5);
+} */
+.middle-result {
+  position: absolute; /* Posiziona in modo assoluto all'interno del contenitore */
+  top: 50%; /* Posiziona il top al 50% del contenitore */
+  left: 50%; /* Posiziona il left al 50% del contenitore */
+  transform: translate(
+    -50%,
+    -50%
+  ); /* Trasla il 50% sia in verticale che in orizzontale rispetto al proprio centro */
+  text-align: center; /* Centra il testo all'interno del div */
+  font-family: "Outfit";
+}
+
+svg {
+  box-shadow: 0px 0px 50px 9px rgba(1, 1, 1, 0.238),
+    inset 0px 0px 50px 9px rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+}
+#container {
+  position: relative; /* Necessario per posizionare il div middle-result all'interno */
+  width: 30%; /* Imposta la larghezza desiderata del contenitore */
+  margin: 0 auto; /* Centra il contenitore orizzontalmente */
+}
+.middle-result h4 {
+  margin-bottom: 40px;
+  font-weight: bold;
+  line-height: 25px;
+  font-size: 1.45em;
+}
+.middle-result p {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 300;
+  font-size: 0.95em;
+}
+.middle-result span {
+  color: #00ffff;
+  display: block;
+}
+.wrong-result {
+  display: inline-block;
+  width: 30%;
+  font-size: 60px;
+  font-family: "Outfit";
+  text-align: right;
+  font-weight: 300;
+}
+.wrong-result h3 {
+  font-size: 20px;
+}
+#rateus-button {
+  background-color: rgba(208, 231, 252, 0);
+  color: white;
+  border: 2px solid white;
+  font-size: 25px;
+  font-weight: bold;
+  padding-block: 15px;
+  padding-inline: 80px;
+  box-shadow: 0px 0px 25px -5px #00ffff54;
+  cursor: pointer;
+  font-family: "Outfit";
+}
+.correct-percentage,
+.wrong-percentage {
+  font-weight: bold;
+}
