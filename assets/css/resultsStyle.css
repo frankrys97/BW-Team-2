@@ -20,8 +20,7 @@ footer {
 }
 .middle-box {
   width: 100%;
-  padding-top: 100px;
-  padding-bottom: 50px;
+  margin-block: 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -62,22 +61,28 @@ footer {
   text-align: center; /* Centra il testo all'interno del div */
   font-family: "Outfit";
 }
+
+svg {
+  box-shadow: 0px 0px 50px 9px rgba(1, 1, 1, 0.238),
+    inset 0px 0px 50px 9px rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+}
 #container {
   position: relative; /* Necessario per posizionare il div middle-result all'interno */
-  width: 35%; /* Imposta la larghezza desiderata del contenitore */
+  width: 30%; /* Imposta la larghezza desiderata del contenitore */
   margin: 0 auto; /* Centra il contenitore orizzontalmente */
 }
 .middle-result h4 {
   margin-bottom: 40px;
   font-weight: bold;
   line-height: 25px;
-  font-size: 1.5em;
+  font-size: 1.45em;
 }
 .middle-result p {
   font-size: 14px;
   line-height: 20px;
   font-weight: 300;
-  font-size: 1em;
+  font-size: 0.95em;
 }
 .middle-result span {
   color: #00ffff;
