@@ -35,6 +35,7 @@ stars.forEach((star, index) => {
   star.addEventListener("click", () => {
     resetKeepStars();
     keepStars(index + 1);
+    removeRedParagraphStars();
   });
 });
 const feedbackContainer = document.getElementById("response");
@@ -46,6 +47,22 @@ const inputDiv = document.getElementById("inputDiv");
 const input = document.getElementById("input");
 const starsDiv = document.getElementById("stars-div");
 
+function removeRedParagraph() {
+  const redParagraph = inputDiv.querySelector("p");
+  if (redParagraph) {
+    inputDiv.removeChild(redParagraph);
+  }
+}
+
+function removeRedParagraphStars() {
+  const redParagraph = starsDiv.querySelector("p");
+  if (redParagraph) {
+    starsDiv.removeChild(redParagraph);
+  }
+}
+
+input.addEventListener("input", removeRedParagraph);
+
 feedbackButton.addEventListener("click", () => {
   const numStars = document.querySelectorAll(".keepStars").length;
   if (input.value === "") {
@@ -56,15 +73,18 @@ feedbackButton.addEventListener("click", () => {
     required.innerHTML = "* leave a feedback";
     required.style.color = "red";
     required.style.fontSize = "1em";
+    required.style.marginTop = "10px";
     inputDiv.appendChild(required);
   } else if (numStars === 0) {
     while (starsDiv.querySelector("p")) {
       starsDiv.removeChild(starsDiv.querySelector("p"));
     }
     const required2 = document.createElement("p");
-    required2.innerHTML = "* leave a feedback";
+    required2.innerHTML = "* leave a rating";
     required2.style.color = "red";
     required2.style.fontSize = "1em";
+    required2.style.marginTop = "10px";
+
     starsDiv.appendChild(required2);
   } else {
     const feedbackMessage = document.createElement("p");
@@ -77,8 +97,7 @@ feedbackButton.addEventListener("click", () => {
     main.appendChild(feedbackDiv);
 
     if (numStars >= 1 && numStars <= 6) {
-      feedbackMessage.innerText =
-        "We are sorry, we'll do better the next time!";
+      feedbackMessage.innerText = "We are sorry, we'll do better next time!";
     } else if (numStars === 0) {
       feedbackMessage.innerText = "No stars selected";
     } else {
@@ -88,8 +107,9 @@ feedbackButton.addEventListener("click", () => {
     infoButton.style.display = "block";
     main.style.marginTop = "150px";
   }
-
-  // while (feedbackContainer.firstChild) {
-  //  feedbackContainer.removeChild(feedbackContainer.firstChild);
-  //}
 });
+
+window.history.pushState(null, null, window.location.href);
+window.onpopstate = function (event) {
+  window.history.go(1);
+};

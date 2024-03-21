@@ -1,7 +1,6 @@
-// const totalQuestion = JSON.parse(sessionStorage.getItem("totalQuestion"));
-// const finalScore = JSON.parse(sessionStorage.getItem("finalScore"));
-const totalQuestion = 30;
-const finalScore = 20;
+const totalQuestion = JSON.parse(sessionStorage.getItem("totalQuestion"));
+const finalScore = JSON.parse(sessionStorage.getItem("finalScore"));
+
 const correctPercentage = ((100 / totalQuestion) * finalScore).toFixed(1);
 const wrongPercentage = (
   (100 / totalQuestion) *
@@ -18,18 +17,6 @@ numberOfCorrect.innerHTML = `${finalScore}/ ${totalQuestion} Questions`;
 numberOfWrong.innerHTML = `${
   totalQuestion - finalScore
 }/ ${totalQuestion} Questions`;
-// const resultsText = document.querySelector("#results-text");
-// const resultsP = document.querySelector(".results-p");
-// if (parseFloat(correctPercentage) >= 60) {
-//   resultsText.innerHTML = ` Congratulations!<span>You passed the exam.</span>`;
-//   resultsP.innerHTML = `We'll send you the certificate in few minutes. Check your email
-//   (including promotions / spam folder)`;
-// } else {
-//   resultsText.innerHTML = `We're sorry.<span>You didn't pass the exam.</span>`;
-//   resultsP.innerHTML = `You will be able to retry your exam on the next available date.`;
-//   const resultsSpan = document.querySelector("span");
-//   resultsSpan.style.color = "red";
-// }
 const container = document.querySelector("#container");
 container.innerHTML = `<svg class="svg" viewBox="-1 -1 141 141">
 <defs>
@@ -121,3 +108,8 @@ for (let j = 0; j < dark.length; j++) {
   // Memorizza l'ID dell'intervallo per poterlo fermare in seguito
   intervals.push(setInterval(anim(j), t));
 }
+
+window.history.pushState(null, null, window.location.href);
+window.onpopstate = function (event) {
+  window.history.go(1);
+};

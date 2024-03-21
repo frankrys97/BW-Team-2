@@ -1,17 +1,3 @@
-/*const checkBox = document.getElementById("promise")
-const button = document.querySelector(".proceed")
-button.disabled = true
-checkBox.addEventListener("change", () => {
-    checkBox.addEventListener("change", function () {
-        if (this.checked) {
-            button.disabled = false;
-            button.classList.add("activeButton")
-        } else {
-            button.disabled = true;
-            button.classList.remove("activeButton")
-        }
-    });
-})*/
 const checkbox = document.getElementById("demo_opt_1");
 const button = document.querySelector(".proceed");
 button.disabled = true;
@@ -898,6 +884,7 @@ const hard30 = [
 
 const selectDiff = document.getElementById("selectDiff");
 const difficultChoiceDiv = document.getElementById("difficultChoice");
+const selectNumber = document.getElementById("selectNumber");
 
 selectDiff.addEventListener("change", () => {
   while (difficultChoiceDiv.querySelector("p")) {
@@ -906,14 +893,25 @@ selectDiff.addEventListener("change", () => {
 });
 
 button.addEventListener("click", () => {
+  const selectNum = selectNumber.value;
+
   if (selectDiff.value === "opzione1") {
-    sessionStorage.setItem("easy30", JSON.stringify(easy30));
+    sessionStorage.setItem(
+      "arrayEasy",
+      JSON.stringify(easy30.slice(0, parseInt(selectNum)))
+    );
     window.location.href = "benchmarkPage.html";
   } else if (selectDiff.value === "opzione2") {
-    sessionStorage.setItem("medium30", JSON.stringify(medium30));
+    sessionStorage.setItem(
+      "arrayEasy",
+      JSON.stringify(medium30.slice(0, parseInt(selectNum)))
+    );
     window.location.href = "benchmarkPage.html";
   } else if (selectDiff.value === "opzione3") {
-    sessionStorage.setItem("hard30", JSON.stringify(hard30));
+    sessionStorage.setItem(
+      "arrayEasy",
+      JSON.stringify(hard30.slice(0, parseInt(selectNum)))
+    );
     window.location.href = "benchmarkPage.html";
   } else {
     const required = document.createElement("p");
@@ -923,3 +921,8 @@ button.addEventListener("click", () => {
     difficultChoiceDiv.appendChild(required);
   }
 });
+
+window.history.pushState(null, null, window.location.href);
+window.onpopstate = function (event) {
+  window.history.go(1);
+};

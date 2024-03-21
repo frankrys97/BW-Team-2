@@ -174,4 +174,9 @@ select {
   color: white;
   font-size: 0.7em;
   border: 0.5px solid white;
+  font-family: "Outfit";
+}
+
+#selectNumber {
+  margin-left: 20px;
 }

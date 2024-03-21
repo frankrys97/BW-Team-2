@@ -10,6 +10,10 @@ body {
   color: white;
 }
 
+#logo img {
+  width: 15%;
+}
+
 header {
   display: flex;
   select {
@@ -18,10 +22,6 @@ header {
     border: transparent;
     color: white;
   }
-}
-
-#logo img {
-  width: 15%;
 }
 
 main {
@@ -165,5 +165,9 @@ footer {
 }
 
 .selectedAnswer {
+  background-color: #d20094;
+}
+
+#proceed:hover {
   background-color: #d20094;
 }
