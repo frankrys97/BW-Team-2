@@ -40,15 +40,18 @@ p {
   font-family: "inter";
 }
 
+svg path {
+  fill: rgba(255, 255, 255, 0.719);
+}
+
+svg {
+  margin-inline: 3px;
+}
+
 #stars-div {
   margin-top: 30px;
   margin-bottom: 50px;
   padding: 30px;
-}
-
-i {
-  color: white;
-  font-size: 40px;
 }
 
 #input {
@@ -61,6 +64,7 @@ i {
   border-bottom: 3px solid #d20094;
   font-size: 20px;
   font-family: "inter";
+  color: white;
 }
 #input:focus {
   outline: none;
@@ -69,6 +73,8 @@ i {
 footer {
   margin-top: 40px;
   text-align: center;
+  display: flex;
+  justify-content: center;
 }
 
 .button {
@@ -81,12 +87,35 @@ footer {
   border: none;
   box-shadow: 4px 4px 41px 7px rgba(0, 255, 255, 0.76);
   margin-inline: 30px;
+  cursor: pointer;
+}
+
+#infoButton {
+  display: none;
 }
 
 .blueStars {
-  color: #00ffff;
+  fill: #00ffff;
 }
 
 .keepStars {
-  color: #00ffff;
+  fill: #00ffff;
+}
+
+.newDiv {
+  display: grid;
+  place-items: center;
+  height: 20vh;
+
+  font-weight: bold;
+  font-family: "outfit";
+}
+
+.newDiv p {
+  font-size: 3em;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
 }
