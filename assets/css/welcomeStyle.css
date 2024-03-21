@@ -1,3 +1,6 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Outfit:wght@100..900&display=swap");
+
 body {
   background-image: url(../bg.jpg);
   background-repeat: no-repeat;
@@ -8,11 +11,10 @@ body {
 
 #logo img {
   width: 15%;
-
 }
 
 main h1 {
-  font-family: "outfit";
+  font-family: "Outfit";
   color: white;
   font-size: 60px;
   font-weight: 400;
@@ -27,14 +29,14 @@ h1 span {
 }
 
 main h2 {
-  font-family: "outfit";
+  font-family: "Outfit";
   color: white;
   margin: 0;
   font-size: 60px;
 }
 
 main h3 {
-  font-family: "inter";
+  font-family: "Inter";
   color: #d20094;
   margin-top: 3%;
   margin-bottom: 0;
@@ -42,7 +44,7 @@ main h3 {
 }
 
 main p {
-  font-family: "inter";
+  font-family: "Inter";
   color: white;
   font-size: 16px;
 }
@@ -50,18 +52,15 @@ main p {
 ul {
   color: white;
   font-size: 16px;
-  font-family: "inter";
+  font-family: "Inter";
   margin-top: 2%;
   line-height: 30px;
-
 }
 
 footer label {
-  font-family: "inter";
+  font-family: "Inter";
   font-size: px;
   color: white;
-
-
 }
 
 .proceed {
@@ -77,9 +76,7 @@ footer label {
 footer {
   display: flex;
   justify-content: space-between;
-  margin-top: 10%;
-
-
+  margin-top: 40px;
 }
 
 /*#promise {
@@ -115,7 +112,7 @@ footer {
   align-items: center;
 }
 
-.css-checkbox+label {
+.css-checkbox + label {
   position: relative;
   font-size: 14px;
   cursor: pointer;
@@ -126,7 +123,7 @@ footer {
   font-family: "Inter";
 }
 
-.css-checkbox+label::before {
+.css-checkbox + label::before {
   content: " ";
   display: inline-block;
   vertical-align: middle;
@@ -139,10 +136,9 @@ footer {
   border-color: rgb(255, 255, 255);
   border-radius: 2px;
   box-shadow: rgba(42, 42, 42, 0.53) 0px 0px 5px 0px;
-
 }
 
-.css-checkbox:checked+label::after {
+.css-checkbox:checked + label::after {
   content: " ";
   background-image: url(../whiteTick.png);
   background-repeat: no-repeat;
@@ -162,9 +158,20 @@ footer {
   width: 26px;
 }
 
-#inputPreview p{
-font-family: "inter";
-font-size: 16px;
-font-weight: 600;
-color: white;
+#inputPreview p {
+  font-family: "inter";
+  font-size: 16px;
+  font-weight: 600;
+  color: white;
+}
+
+#difficultChoice {
+  margin-top: 50px;
+}
+select {
+  padding: 5px;
+  background-color: transparent;
+  color: white;
+  font-size: 0.7em;
+  border: 0.5px solid white;
 }
