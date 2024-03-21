@@ -13,7 +13,7 @@ body {
 }
 
 header {
-  margin-bottom: 80px;
+  margin-bottom: 10px;
 }
 
 #general-box {
@@ -48,7 +48,7 @@ p {
 
 i {
   color: white;
-  font-size: 50px;
+  font-size: 40px;
 }
 
 #input {
@@ -67,7 +67,7 @@ i {
 }
 
 footer {
-  margin-top: 60px;
+  margin-top: 40px;
   text-align: center;
 }
 
