@@ -68,8 +68,7 @@ footer {
 }
 
 .container {
-  text-align: center;
-  float: left;
+  position: relative;
   width: 360px;
   height: 360px;
 }
