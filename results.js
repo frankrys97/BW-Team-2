@@ -32,19 +32,19 @@ if (parseFloat(correctPercentage) >= 60) {
 }
 
 // funzione per far funzionare la sbarra di progressione dei Results
-function progressioneBarraRisultati() {
+function animationCircle() {
   // mi aggancio al cerchio in questione
   let path = document.querySelector("#purple-circle");
   console.log(path);
 
   // calcolo la progressione del cerchio che deve effettuare
-  let progressionePath = (880 / totalQuestion) * finalScore;
-  console.log(progressionePath);
+  let progressionPath = (880 / totalQuestion) * finalScore;
+  console.log(progressionPath);
 
-  path.style.strokeDashoffset = `${progressionePath}px`;
+  path.style.strokeDashoffset = `${progressionPath}px`;
 }
 
-progressioneBarraRisultati();
+animationCircle();
 
 window.history.pushState(null, null, window.location.href);
 window.onpopstate = function (event) {
