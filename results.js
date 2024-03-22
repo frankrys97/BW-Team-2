@@ -38,7 +38,7 @@ function animationCircle() {
   console.log(path);
 
   // calcolo la progressione del cerchio che deve effettuare
-  let progressionPath = (880 / totalQuestion) * finalScore;
+  let progressionPath = (1130 / totalQuestion) * finalScore;
   console.log(progressionPath);
 
   path.style.strokeDashoffset = `${progressionPath}px`;

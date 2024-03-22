@@ -69,8 +69,8 @@ footer {
 
 .container {
   position: relative;
-  width: 360px;
-  height: 360px;
+  width: 430px;
+  height: 430px;
 }
 #blue-circle {
   fill: none;
@@ -82,7 +82,7 @@ footer {
   fill: none;
   stroke: #d20094;
   stroke-width: 50px;
-  stroke-dasharray: 880px;
+  stroke-dasharray: 1130px;
   stroke-dashoffset: 0px;
   animation: anim 1s linear forwards;
 }
@@ -104,7 +104,7 @@ footer {
   margin-bottom: 20px;
   font-weight: bold;
   line-height: 25px;
-  font-size: 1.1em;
+  font-size: 1.45em;
 }
 .middle-result p {
   font-size: 14px;
