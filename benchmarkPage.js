@@ -261,8 +261,9 @@ button.addEventListener("click", () => {
   resetTimer();
 
   setRemainingPathColor(timeLeft);
-
-  questionCounter++;
+  if (questionCounter < arrayEasy.length) {
+    questionCounter++;
+  }
 
   let numQuestion = document.getElementById("numQuestion");
 
