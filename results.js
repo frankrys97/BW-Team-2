@@ -25,10 +25,9 @@ container.innerHTML = `<svg class="svg" viewBox="-1 -1 141 141">
   </clipPath>
 </defs>
 <g clip-path="url(#clip-path)">
-  <path class="light" d="M70,70 v-70 a70,70 0 0,1 0,140 a70,70 0 1,1 0,-140" fill="#d20094" />
-  <path class="dark"  fill="#00ffff" />
+  <path class="purple" d="M70,70 v-70 a70,70 0 0,1 0,140 a70,70 0 1,1 0,-140" fill="#d20094" />
+  <path class="lightBlue"  fill="#00ffff" />
 </g>
-<path d="M20,70 a50,50 0 0,1 100,0 a50,50 0 0,1 -100,0" fill="none" />
 
 </svg
 >
@@ -50,9 +49,9 @@ if (parseFloat(correctPercentage) >= 60) {
   const resultsSpan = document.querySelector("span");
   resultsSpan.style.color = "red";
 }
-// Seleziona gli elementi con la classe 'dark' e calcola il raggio del cerchio
-let dark = document.getElementsByClassName("dark"),
-  radius = document.getElementsByClassName("svg")[0].getBBox().width / 2,
+// Seleziona gli elementi con la classe 'lightBlue' e calcola il raggio del cerchio
+let lightBlue = document.getElementsByClassName("lightBlue"),
+  radius = document.querySelector("svg").getBBox().width / 2,
   t = 0.5, // Intervallo di aggiornamento dell'animazione
   theta = {}, // Oggetto per memorizzare l'angolo theta per ogni fetta
   maxTheta = calcTheta(document.getElementsByClassName("perc")), // Calcola l'angolo massimo per ogni fetta
@@ -65,7 +64,7 @@ function calcTheta(el) {
   for (let i = 0; i < el.length; i++) {
     theta[i] = 0; // Imposta l'angolo theta iniziale a 0
     // Imposta la traslazione per centrare la fetta
-    dark[i].setAttribute(
+    lightBlue[i].setAttribute(
       "transform",
       "translate(" + radius + "," + radius + ")"
     );
@@ -95,7 +94,7 @@ let anim = function (j) {
       Math.cos((theta[j] * Math.PI) / 180) * -radius +
       "z";
     // Imposta il percorso della fetta
-    dark[j].setAttribute("d", d);
+    lightBlue[j].setAttribute("d", d);
     // Interrompe l'animazione quando l'angolo theta raggiunge l'angolo massimo
     if (theta[j] > maxTheta[j]) {
       clearInterval(intervals[j]);
@@ -104,7 +103,7 @@ let anim = function (j) {
 };
 
 // Avvia l'animazione per ogni fetta
-for (let j = 0; j < dark.length; j++) {
+for (let j = 0; j < lightBlue.length; j++) {
   // Memorizza l'ID dell'intervallo per poterlo fermare in seguito
   intervals.push(setInterval(anim(j), t));
 }
