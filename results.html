@@ -26,13 +26,25 @@
         <div class="correct-result">
           <h1>Correct</h1>
           <h1 class="correct-percentage"></h1>
-          <h3 class="numberOfCorrect">4/6 questions</h3>
+          <h3 class="numberOfCorrect"></h3>
         </div>
-        <div id="container"></div>
+
+        <div class="container">
+          <svg id="circle">
+            <circle id="blue-circle" r="140" cx="50%" cy="50%"></circle>
+            <circle id="purple-circle" r="140" cx="50%" cy="50%"></circle>
+          </svg>
+          <div class="middle-result">
+            <h4 id="results-text"></h4>
+
+            <p class="results-p"></p>
+          </div>
+        </div>
+
         <div class="wrong-result">
           <h1>Wrong</h1>
           <h1 class="wrong-percentage"></h1>
-          <h3 class="numberOfWrong">2/6 questions</h3>
+          <h3 class="numberOfWrong"></h3>
         </div>
       </div>
     </main>

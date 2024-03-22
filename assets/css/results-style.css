@@ -57,32 +57,55 @@ footer {
 }
 
 .middle-result {
-  position: absolute; /* Posiziona in modo assoluto all'interno del contenitore */
-  top: 50%; /* Posiziona il top al 50% del contenitore */
-  left: 50%; /* Posiziona il left al 50% del contenitore */
-  transform: translate(
-    -50%,
-    -50%
-  ); /* Trasla il 50% sia in verticale che in orizzontale rispetto al proprio centro */
-  text-align: center; /* Centra il testo all'interno del div */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
   font-family: "Outfit";
+  width: 200px;
+  height: 200px;
 }
 
-svg {
-  box-shadow: 0px 0px 50px 9px rgba(1, 1, 1, 0.238),
-    inset 0px 0px 50px 9px rgba(0, 0, 0, 0.5);
+.container {
+  text-align: center;
+  float: left;
+  width: 360px;
+  height: 360px;
+}
+#blue-circle {
+  fill: none;
+  stroke: #00ffff;
+  stroke-width: 50px;
+}
+
+#purple-circle {
+  fill: none;
+  stroke: #d20094;
+  stroke-width: 50px;
+  stroke-dasharray: 880px;
+  stroke-dashoffset: 0px;
+  animation: anim 1s linear forwards;
+}
+@keyframes anim {
+  0% {
+    stroke-dashoffset: 0px;
+  }
+}
+
+#circle {
+  width: 93%;
+  height: 93%;
+  transform: rotateY(-180deg) rotateZ(-90deg);
+  box-shadow: 0px 0px 20px 6px black;
   border-radius: 50%;
 }
-#container {
-  position: relative; /* Necessario per posizionare il div middle-result all'interno */
-  width: 30%; /* Imposta la larghezza desiderata del contenitore */
-  margin: 0 auto; /* Centra il contenitore orizzontalmente */
-}
+
 .middle-result h4 {
-  margin-bottom: 40px;
+  margin-bottom: 20px;
   font-weight: bold;
   line-height: 25px;
-  font-size: 1.45em;
+  font-size: 1.1em;
 }
 .middle-result p {
   font-size: 14px;
