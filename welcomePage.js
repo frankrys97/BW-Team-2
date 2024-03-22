@@ -900,19 +900,25 @@ button.addEventListener("click", () => {
   if (selectDiff.value === "opzione1") {
     sessionStorage.setItem(
       "arrayEasy",
-      JSON.stringify(easy30.slice(0, parseInt(selectNum)))
+      JSON.stringify(
+        easy30.sort(() => Math.random() - 0.5).slice(0, parseInt(selectNum))
+      )
     );
     window.location.href = "benchmarkPage.html";
   } else if (selectDiff.value === "opzione2") {
     sessionStorage.setItem(
       "arrayEasy",
-      JSON.stringify(medium30.slice(0, parseInt(selectNum)))
+      JSON.stringify(
+        medium30.sort(() => Math.random() - 0.5).slice(0, parseInt(selectNum))
+      )
     );
     window.location.href = "benchmarkPage.html";
   } else if (selectDiff.value === "opzione3") {
     sessionStorage.setItem(
       "arrayEasy",
-      JSON.stringify(hard30.slice(0, parseInt(selectNum)))
+      JSON.stringify(
+        hard30.sort(() => Math.random() - 0.5).slice(0, parseInt(selectNum))
+      )
     );
     window.location.href = "benchmarkPage.html";
   } else {
